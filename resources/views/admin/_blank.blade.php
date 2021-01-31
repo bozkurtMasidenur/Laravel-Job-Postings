@@ -108,7 +108,7 @@
                         <span class="menu-title">Jobs</span>
                     </a>
                 </li>
-                <!--<li class="nav-item">
+            <!--<li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <i class="typcn typcn-briefcase menu-icon"></i>
                         <span class="menu-title">UI Elements</span>
@@ -217,13 +217,16 @@
             <div class="content-wrapper">
 
                 @include('admin._header')
-                @include('admin._sidebar')
+                <div class="content-wrapper">
+
+                </div>
+                <!-- content-wrapper ends -->
                 @include('admin._footer')
                 @yield('footer')
 
 
             </div>
-        <!-- content-wrapper ends -->
+            <!-- content-wrapper ends -->
 
         </div>
         <!-- main-panel ends -->
@@ -231,9 +234,9 @@
     <!-- page-body-wrapper ends -->
 
 
-        </div>
-        <!-- container-scroller -->
-        <!-- base:js -->
+</div>
+<!-- container-scroller -->
+<!-- base:js -->
 <script src="{{asset('assets')}}/admin/vendors/js/vendor.bundle.base.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page-->

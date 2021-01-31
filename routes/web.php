@@ -24,15 +24,26 @@ Route::get('/', function () {
 
 //Route::get('/home', [HomeController::class, 'index']);
 
-//ADMİN
-Route::get('/admin',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
+//grup halinde middleware uygulanışı  prefix=> ön ad
+Route::middleware('auth')->prefix('admin')->group(function (){
+    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
 
-/*Route::get('/login', function () {
-    return view('admin.login');
-});*/ /* **************** LOGİN ************** */
+    Route::get('category',[App\Http\Controllers\Admin\CategoryController::class,'index'])->name('admin_category');
+    Route::get('category/add',[App\Http\Controllers\Admin\CategoryController::class,'add'])->name('admin_category_add');
+    Route::get('category/update',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin_category_update');
+    Route::get('category/delete',[App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_delete');
+    Route::get('category/show',[App\Http\Controllers\Admin\CategoryController::class,'show'])->name('admin_category_show');
+
+});
+
+
+
+
+
+ /* **************** LOGİN ************** */
 Route::get('/admin/login',[HomeController::class,'login'])->name('adminlogin');
 Route::post('/admin/logincheck',[HomeController::class,'logincheck'])->name('adminlogincheck');
-//Route::get('/admin/logout',[HomeController::class,'logout'])->name('adminlogout');
+Route::get('/admin/logout',[HomeController::class,'logout'])->name('adminlogout');
 
 
 

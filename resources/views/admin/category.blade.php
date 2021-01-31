@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title')</title>
+    <title>Category List</title>
     <!-- base:css -->
     <link rel="stylesheet" href="{{asset('assets')}}/admin/vendors/typicons.font/font/typicons.css">
     <link rel="stylesheet" href="{{asset('assets')}}/admin/vendors/css/vendor.bundle.base.css">
@@ -108,7 +108,7 @@
                         <span class="menu-title">Jobs</span>
                     </a>
                 </li>
-                <!--<li class="nav-item">
+            <!--<li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <i class="typcn typcn-briefcase menu-icon"></i>
                         <span class="menu-title">UI Elements</span>
@@ -217,13 +217,78 @@
             <div class="content-wrapper">
 
                 @include('admin._header')
-                @include('admin._sidebar')
+                <div class="content-wrapper">
+
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Category List</h4>
+
+                                <div class="table-responsive pt-3">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                Id
+                                            </th>
+                                            <th>
+                                                Parent
+                                            </th>
+                                            <th>
+                                                Title(s)
+                                            </th>
+                                            <th>
+                                                Status
+                                            </th>
+                                            <th>
+                                                Edit
+                                            </th>
+                                            <th>
+                                                Delete
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        @foreach($datalist as $datalist)
+
+                                        <tr>
+                                            <td>
+                                                {{$datalist->id}}
+                                            </td>
+                                            <td>
+                                                {{$datalist->parent_id}}
+                                            </td>
+                                            <td>
+                                                {{$datalist->title}}
+                                            </td>
+                                            <td>
+                                                {{$datalist->status}}
+                                            </td>
+                                            <td>
+                                                Edit
+                                            </td>
+                                            <td>
+                                                Delete
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- content-wrapper ends -->
                 @include('admin._footer')
                 @yield('footer')
 
 
             </div>
-        <!-- content-wrapper ends -->
+            <!-- content-wrapper ends -->
 
         </div>
         <!-- main-panel ends -->
@@ -231,9 +296,9 @@
     <!-- page-body-wrapper ends -->
 
 
-        </div>
-        <!-- container-scroller -->
-        <!-- base:js -->
+</div>
+<!-- container-scroller -->
+<!-- base:js -->
 <script src="{{asset('assets')}}/admin/vendors/js/vendor.bundle.base.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page-->
@@ -252,5 +317,6 @@
 <!-- Custom js for this page-->
 <script src="{{asset('assets')}}/admin/js/dashboard.js"></script>
 <!-- End custom js for this page-->
+
 </body>
 </html>

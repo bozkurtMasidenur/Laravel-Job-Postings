@@ -18,6 +18,7 @@ class HomeController extends Controller
 
     public function logincheck (Request $request)
     {
+
         if ($request->isMethod('post'))
         {
             $credentials = $request->only('email','password');
@@ -27,7 +28,7 @@ class HomeController extends Controller
                 return redirect()->intended('admin');
             }
             return back()->withErrors([
-                'email' =>'Email hatası'
+                'email' => 'The provided credentials do not match our record',
             ]);
         }
         else
@@ -37,7 +38,12 @@ class HomeController extends Controller
     }
 
 
-    public function logout(){
-        return view('admin.logout');
+    public function logout(Request $request){
+        //return view('admin.login');
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
+
     }
 }

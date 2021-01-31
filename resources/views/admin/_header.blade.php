@@ -127,17 +127,21 @@
             <li class="nav-item nav-profile dropdown">
                 <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown" id="profileDropdown">
                     <i class="typcn typcn-user-outline mr-0"></i>
-                    <span class="nav-profile-name">Evan Morales</span>
+                   <!-- <span class="nav-profile-name">Evan Morales</span>-->
+                    @auth
+                    <a href="#" class="nav-profile-name">{{Auth::user()->name}}</a>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                     <a class="dropdown-item">
                         <i class="typcn typcn-cog text-primary"></i>
                         Settings
                     </a>
-                    <a class="dropdown-item">
+                    <a href="{{route('adminlogout')}}" class="dropdown-item">
                         <i class="typcn typcn-power text-primary"></i>
                         Logout
                     </a>
+                <!--<a href="{{route('adminlogout')}}" class="typcn typcn-power text-primary">Logout</a> -->
+                    @endauth
                 </div>
             </li>
         </ul>
