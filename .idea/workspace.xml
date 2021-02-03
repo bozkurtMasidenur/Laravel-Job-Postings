@@ -11,25 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="013ee6b7-6d23-4f65-810e-cdc0f2dfc17a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/_blank.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/blog-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/blog-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/blog-home.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/blog-home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/contact-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/job-category.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/job-category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/job-search.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/job-search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/job-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/job-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPS/comport-master/pricing-plan.html" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPS/comport-master/assets/pages/pricing-plan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,12 +165,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\Laravel3j\resources\views\admin" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\Laravel3j\app\Http\Controllers\Admin" />
       <recent name="C:\Php\Laravel3j\TEMPS\comport-master\assets\pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\Laravel3j\resources\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -247,6 +231,12 @@
       <workItem from="1612095452170" duration="540000" />
       <workItem from="1612108603813" duration="1774000" />
       <workItem from="1612110495341" duration="1773000" />
+      <workItem from="1612372707543" duration="1765000" />
+      <workItem from="1612375600143" duration="1819000" />
+      <workItem from="1612377471531" duration="1182000" />
+      <workItem from="1612383738175" duration="591000" />
+      <workItem from="1612385901382" duration="1773000" />
+      <workItem from="1612387724891" duration="1150000" />
     </task>
     <servers />
   </component>
