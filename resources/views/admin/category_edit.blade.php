@@ -223,44 +223,45 @@
                     <div class="col-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">ADD CATEGORY FORM</h4>
+                                <h4 class="card-title">EDIT CATEGORY FORM</h4>
 
-                                <form class="forms-sample" action="{{route('admin_category_create')}}" method="post">
+                                <form class="forms-sample" action="{{route('admin_category_update',['id'=>$data->id])}}" method="post">
                                     @csrf
                                     <div class="form-group">
                                         <label >Parent</label>
                                         <select name="parent_id" class="form-control" id="exampleSelectGender">
-                                            <option value="0" selected="selected">Main Category</option>
+                                            <option value="0" >Main Category</option>
                                             @foreach($datalist as $datalist)
-                                            <option value="{{$datalist->id}}">{{$datalist->title}}</option>
+                                            <option value="{{$datalist->id}}" @if ($datalist->id==$data->parent_id) selected="selected" @endif>{{$datalist->title}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label >Title</label>
-                                        <input type="text" name="title" class="form-control" id="exampleInputEmail3" placeholder="Title">
+                                        <input type="text" name="title" value="{{$data->title}}" class="form-control" id="exampleInputEmail3" placeholder="Title">
                                     </div>
                                     <div class="form-group">
                                         <label >Keywords</label>
-                                        <input type="text" name="keywords" class="form-control" id="exampleInputEmail3" placeholder="Keywords">
+                                        <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control" id="exampleInputEmail3" placeholder="Keywords">
                                     </div>
                                     <div class="form-group">
                                         <label >Description</label>
-                                        <input type="text" name="description" class="form-control" id="exampleInputEmail3" placeholder="Description">
+                                        <input type="text" name="description" value="{{$data->description}}" class="form-control" id="exampleInputEmail3" placeholder="Description">
                                     </div>
                                     <div class="form-group">
                                         <label >Slug</label>
-                                        <input type="text" name="slug" class="form-control" id="exampleInputEmail3" placeholder="Slug">
+                                        <input type="text" name="slug" value="{{$data->slug}}" class="form-control" id="exampleInputEmail3" placeholder="Slug">
                                     </div>
                                     <div class="form-group">
                                         <label >Status</label>
                                         <select name="status" class="form-control" id="exampleSelectGender">
+                                            <option selected="selected">{{$data->status}}</option>
                                             <option>False</option>
                                             <option>True</option>
                                         </select>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mr-2">Add Category</button>
-                                    <a href="{{route('admin_category')}}" class="btn btn-light">Cancel</a>
+                                    <button type="submit" class="btn btn-primary mr-2">Update Category</button>
+                                    <button class="btn btn-light">Cancel</button>
                                 </form>
                             </div>
                         </div>

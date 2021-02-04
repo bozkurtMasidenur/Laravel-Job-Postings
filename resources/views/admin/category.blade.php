@@ -267,7 +267,7 @@
                                                 {{$datalist->status}}
                                             </td>
                                             <td>
-                                                Edit
+                                                <a href="{{route('admin_category_edit',['id'=>$datalist->id])}}"  >Edit</a>
                                             </td>
                                             <td>
                                                 <a href="{{route('admin_category_delete',['id'=>$datalist->id])}}" onclick="return confirm('Delete! Are you sure?')" >Delete</a>

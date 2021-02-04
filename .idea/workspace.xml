@@ -10,10 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="013ee6b7-6d23-4f65-810e-cdc0f2dfc17a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
+    <list default="true" id="013ee6b7-6d23-4f65-810e-cdc0f2dfc17a" name="Default Changelist" comment="Category edit ve düzenleme yapılması">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -165,12 +166,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Php\Laravel3j\resources\views\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Php\Laravel3j\app\Http\Controllers\Admin" />
       <recent name="C:\Php\Laravel3j\TEMPS\comport-master\assets\pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Php\Laravel3j\resources\views\admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -236,8 +237,19 @@
       <workItem from="1612377471531" duration="1182000" />
       <workItem from="1612383738175" duration="591000" />
       <workItem from="1612385901382" duration="1773000" />
-      <workItem from="1612387724891" duration="1150000" />
+      <workItem from="1612387724891" duration="3161000" />
+      <workItem from="1612451552809" duration="1658000" />
+      <workItem from="1612464461686" duration="1769000" />
+      <workItem from="1612466321287" duration="1771000" />
     </task>
+    <task id="LOCAL-00001" summary="Category ekleme silme işlemlerinin yapılması">
+      <created>1612389047290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612389047290</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +266,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Category ekleme silme işlemlerinin yapılması" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category ekleme silme işlemlerinin yapılması" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1609092644064">
@@ -288,6 +304,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1612112180257" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1612389055161">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1612389055161" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
