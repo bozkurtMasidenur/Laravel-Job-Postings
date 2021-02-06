@@ -238,9 +238,10 @@
                                             <th>
                                                 Title(s)
                                             </th>
-                                            <th>Required Qualifications</th>
+                                            <!--<th>Required Qualifications</th>-->
                                             <th>Position</th>
                                             <th>Sector</th>
+                                            <th>Image</th>
                                             <th>Mode of Operation</th>
                                             <th>Location</th>
                                             <th>Experience</th>
@@ -269,14 +270,19 @@
                                             <td>
                                                 {{$datalist->title}}
                                             </td>
-                                            <td>
+                                            <!--<td>
                                                 {{$datalist->required_qualifications}}
-                                            </td>
+                                            </td>-->
                                             <td>
                                                 {{$datalist->position}}
                                             </td>
                                             <td>
                                                 {{$datalist->sector}}
+                                            </td>
+                                            <td>
+                                                @if($datalist->image)
+                                                    <img src="{{Storage::url($datalist->image)}}" height="60" alt="">
+                                                @endif
                                             </td>
                                             <td>
                                                 {{$datalist->mode_of_operation}}

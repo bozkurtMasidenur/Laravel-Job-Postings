@@ -174,7 +174,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">ADD JOB POSTING FORM</h4>
 
-                                <form class="forms-sample" action="{{route('admin_posting_store')}}" method="post">
+                                <form class="forms-sample" action="{{route('admin_posting_store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
                                         <label >Parent</label>
@@ -198,11 +198,12 @@
                                     </div>
                                     <div class="form-group">
                                         <label >Image</label>
-                                        <input type="text" name="image" class="form-control" id="exampleInputEmail3" placeholder="Image">
+                                        <input type="file" name="image" class="form-control"  placeholder="Image">
                                     </div>
                                     <div class="form-group">
                                         <label >Required Qualifications</label>
                                         <input type="text" name="required_qualifications" class="form-control" id="exampleInputEmail3" placeholder="Required Qualifications">
+
                                     </div>
                                     <div class="form-group">
                                         <label >Position</label>

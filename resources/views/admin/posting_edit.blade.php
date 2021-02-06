@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="{{asset('assets')}}/admin/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('assets')}}/admin/images/favicon.png" />
+    <!-- Zengn metin editörü CKeditor-->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
+
     @yield('css')
     @yield('javascript')
 </head>
@@ -249,7 +252,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label >Image</label>
-                                        <input type="text" name="image"  value="{{$data->image}}"class="form-control" id="exampleInputEmail3" placeholder="Image">
+                                        <input type="file" name="image" value="{{$data->image}}" class="form-control">
+
+                                        @if($data->image)
+                                            <img src="{{Storage::url($data->image)}}" height="60" alt="">
+                                        @endif
                                     </div>
                                     <div class="form-group">
                                         <label >Required Qualifications</label>
@@ -277,7 +284,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label >Detail</label>
-                                        <input type="text" name="detail" value="{{$data->detail}}" class="form-control" id="exampleInputEmail3" placeholder="Detail">
+                                        <textarea id="editor1" class="ckeditor" name="detail" ></textarea>
                                     </div>
 
                                     <div class="form-group">
