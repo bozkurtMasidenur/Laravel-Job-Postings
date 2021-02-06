@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="{{asset('assets')}}/admin/css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('assets')}}/admin/images/favicon.png" />
+
+    <!-- Zengn metin editörü CKeditor-->
+    <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     @yield('css')
     @yield('javascript')
 </head>
@@ -108,32 +111,7 @@
                         <span class="menu-title">Jobs</span>
                     </a>
                 </li>
-            <!--<li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                        <i class="typcn typcn-briefcase menu-icon"></i>
-                        <span class="menu-title">UI Elements</span>
-                        <i class="typcn typcn-chevron-right menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/buttons.html">Buttons</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/typography.html">Typography</a></li>
-                        </ul>
-                    </div>
-                </li>-->
-            <!--<li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-                        <i class="typcn typcn-film menu-icon"></i>
-                        <span class="menu-title">Form elements</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="form-elements">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"><a class="nav-link" href="{{asset('assets')}}/admin/pages/forms/basic_elements.html">Basic Elements</a></li>
-                        </ul>
-                    </div>
-                </li>-->
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="False" aria-controls="charts">
                         <i class="typcn typcn-chart-pie-outline menu-icon"></i>
@@ -158,18 +136,7 @@
                         </ul>
                     </div>
                 </li>
-            <!--<li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                        <i class="typcn typcn-compass menu-icon"></i>
-                        <span class="menu-title">Icons</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="icons">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/icons/mdi.html">Mdi icons</a></li>
-                        </ul>
-                    </div>
-                </li>-->
+
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                         <i class="typcn typcn-user-add-outline menu-icon"></i>
@@ -183,25 +150,7 @@
                         </ul>
                     </div>
                 </li>
-            <!--<li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
-                        <i class="typcn typcn-globe-outline menu-icon"></i>
-                        <span class="menu-title">Error pages</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="error">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/error-404.html"> 404 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/error-500.html"> 500 </a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{asset('assets')}}/admin/pages/documentation/documentation.html">
-                        <i class="typcn typcn-document-text menu-icon"></i>
-                        <span class="menu-title">Documentation</span>
-                    </a>
-                </li>-->
+
             </ul>
             <ul class="sidebar-legend">
                 <li>
@@ -277,7 +226,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label >Detail</label>
-                                        <input type="text" name="detail" class="form-control" id="exampleInputEmail3" placeholder="Detail">
+                                        <!--<input type="text" name="detail" class="form-control" id="exampleInputEmail3" placeholder="Detail">-->
+                                        <textarea id="editor1" class="ckeditor" name="detail" ></textarea>
+
                                     </div>
 
                                     <div class="form-group">
