@@ -103,7 +103,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{asset('assets')}}/admin/index.html">
+                    <a class="nav-link" href="{{route('admin_postings')}}">
                         <i class="typcn typcn-briefcase menu-icon"></i>
                         <span class="menu-title">Jobs</span>
                     </a>

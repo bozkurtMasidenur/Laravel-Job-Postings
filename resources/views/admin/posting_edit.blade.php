@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title')</title>
+    <title>Job Posting Edit</title>
     <!-- base:css -->
     <link rel="stylesheet" href="{{asset('assets')}}/admin/vendors/typicons.font/font/typicons.css">
     <link rel="stylesheet" href="{{asset('assets')}}/admin/vendors/css/vendor.bundle.base.css">
@@ -108,7 +108,7 @@
                         <span class="menu-title">Jobs</span>
                     </a>
                 </li>
-                <!--<li class="nav-item">
+            <!--<li class="nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                         <i class="typcn typcn-briefcase menu-icon"></i>
                         <span class="menu-title">UI Elements</span>
@@ -205,7 +205,7 @@
             </ul>
             <ul class="sidebar-legend">
                 <li>
-                    <p class="sidebar-menu-title">Category</p>
+                    <p class="sidebar-menu-title">Job Postings</p>
                 </li>
                 <li class="nav-item"><a href="#" class="nav-link">#Sales</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">#Marketing</a></li>
@@ -217,13 +217,96 @@
             <div class="content-wrapper">
 
                 @include('admin._header')
-                @include('admin._sidebar')
+                <div class="content-wrapper">
+
+
+                    <div class="col-12 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">EDIT JOB POSTING FORM</h4>
+
+                                <form class="forms-sample" action="{{route('admin_posting_update',['id'=>$data->id])}}" method="post">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label >Parent</label>
+                                        <select name="category_id" class="form-control" >
+                                            @foreach($datalist as $datalist)
+                                                <option value="{{$datalist->id}}" @if ($datalist->id==$data->category_id) selected="selected" @endif>{{$datalist->title}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Title</label>
+                                        <input type="text" name="title" value="{{$data->title}}" class="form-control" id="exampleInputEmail3" placeholder="Title">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Keywords</label>
+                                        <input type="text" name="keywords" value="{{$data->keywords}}" class="form-control" id="exampleInputEmail3" placeholder="Keywords">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Description</label>
+                                        <input type="text" name="description" value="{{$data->description}}" class="form-control" id="exampleInputEmail3" placeholder="Description">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Image</label>
+                                        <input type="text" name="image"  value="{{$data->image}}"class="form-control" id="exampleInputEmail3" placeholder="Image">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Required Qualifications</label>
+                                        <input type="text" name="required_qualifications" value="{{$data->required_qualifications}}" class="form-control" id="exampleInputEmail3" placeholder="Required Qualifications">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Position</label>
+                                        <input type="text" name="position" value="{{$data->position}}" class="form-control" id="exampleInputEmail3" placeholder="Position">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Sector</label>
+                                        <input type="text" name="sector"  value="{{$data->sector}}"class="form-control" id="exampleInputEmail3" placeholder="Sector">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Mode of Operation</label>
+                                        <input type="text" name="mode_of_operation" value="{{$data->mode_of_operation}}" class="form-control" id="exampleInputEmail3" placeholder="Mode of Operation">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Location</label>
+                                        <input type="text" name="location" value="{{$data->location}}" class="form-control" id="exampleInputEmail3" placeholder="Location">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Experience</label>
+                                        <input type="text" name="experience" value="{{$data->experience}}" class="form-control" id="exampleInputEmail3" placeholder="Experience">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Detail</label>
+                                        <input type="text" name="detail" value="{{$data->detail}}" class="form-control" id="exampleInputEmail3" placeholder="Detail">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label >Slug</label>
+                                        <input type="text" name="slug" value="{{$data->slug}}" class="form-control" id="exampleInputEmail3" placeholder="Slug">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Status</label>
+                                        <select name="status"  class="form-control" id="exampleSelectGender">
+                                            <option selected="selected">{{$data->status}}</option>
+                                            <option>False</option>
+                                            <option>True</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mr-2">Update Job Posting</button>
+                                    <a href="{{route('admin_postings')}}" class="btn btn-light">Cancel</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- content-wrapper ends -->
                 @include('admin._footer')
                 @yield('footer')
 
 
             </div>
-        <!-- content-wrapper ends -->
+            <!-- content-wrapper ends -->
 
         </div>
         <!-- main-panel ends -->
@@ -231,9 +314,9 @@
     <!-- page-body-wrapper ends -->
 
 
-        </div>
-        <!-- container-scroller -->
-        <!-- base:js -->
+</div>
+<!-- container-scroller -->
+<!-- base:js -->
 <script src="{{asset('assets')}}/admin/vendors/js/vendor.bundle.base.js"></script>
 <!-- endinject -->
 <!-- Plugin js for this page-->
